@@ -9,10 +9,15 @@ Route::get('/', function () {
 //     'uses'=>'myctl@gTrangchu'
 // ]);
 Route::get('trangchu', function(){
-    return view('page.index');
+    return view('page.layout.index');
 });
 Route::get('trangad',function(){
     return view('admin.layout.index');
+});
+
+Route::group(['prefix'=>'page'],function(){
+    Route::get('danhsach','cSanpham@fgetList');
+
 });
 
 Route::group(['prefix'=>'admin'],function(){

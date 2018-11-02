@@ -8,6 +8,12 @@ use App\mLoaisp;
 use DB;
 class cSanpham extends Controller
 {
+    // danh cho front
+    public function fgetList(){
+        $sanpham = mSanpham::where('id','>',0)->paginate(20);
+        return view('page.danhsachsp',['sanpham'=>$sanpham]);
+    }
+
     public function getList(){
         // $sanpham = mSanpham::where('id','>',0)->paginate(10);
         $sanpham = DB::table('tblSanpham')
