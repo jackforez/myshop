@@ -16,7 +16,7 @@
             </li>
             <!-- sản phẩm -->
             <li>
-               <a href="#"><i class="fa fa-files-o fa-fw"></i> Sản Phẩm<span class="fa arrow"></span></a>
+               <a href="#"><i class="fa fa-cubes fa-fw"></i> Sản Phẩm<span class="fa arrow"></span></a>
                <ul class="nav nav-second-level">
                   <li>
                      <a href="admin/sanpham/danhsach">Danh sách</a>
@@ -32,7 +32,7 @@
             <!-- / .sản phẩm -->
             <!-- loại sản phẩm -->
             <li>
-               <a href="#"><i class="fa fa-files-o fa-fw"></i>Loại Sản Phẩm<span class="fa arrow"></span></a>
+               <a href="#"><i class="fa fa-cubes fa-fw"></i>Loại Sản Phẩm<span class="fa arrow"></span></a>
                <ul class="nav nav-second-level">
                   <li>
                      <a href="admin/loaisp/danhsach">Danh sách</a>
@@ -45,7 +45,7 @@
             <!-- / .loại sản phẩm -->
             <!-- bài viết -->
             <li>
-               <a href="#"><i class="fa fa-files-o fa-fw"></i>Bài viết<span class="fa arrow"></span></a>
+               <a href="#"><i class="fa fa-file-text fa-fw"></i>Bài viết<span class="fa arrow"></span></a>
                <ul class="nav nav-second-level">
                   <li>
                      <a href="#">Danh sách</a>
@@ -53,11 +53,21 @@
                   <li>
                      <a href="#">Thêm mới</a>
                   </li>
-                  <li>
-                     <a href="#">Sửa</a>
-                  </li>
                </ul>
             </li>
             <!-- ./ bài viêt -->
+             <!-- slide -->
+             <li>
+               <a href="#"><i class="fa fa-picture-o fa-fw"></i>Slide<span class="fa arrow"></span></a>
+               <ul class="nav nav-second-level">
+                  <li>
+                     <a href="admin/slide/danhsach">Danh sách</a>
+                  </li>
+                  <li>
+                     <a href="admin/slide/them">Thêm mới</a>
+                  </li>
+               </ul>
+            </li>
+            <!-- ./ slide -->
          </ul>
       </div>

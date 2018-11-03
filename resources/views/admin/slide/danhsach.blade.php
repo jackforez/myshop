@@ -17,24 +17,23 @@
                                 <thead>
                                     <tr>
                                         <th style="width:5%">ID</th>
-                                        <th>Hình ảnh</th>
+                                        <th style="width:25%">Hình ảnh</th>
+                                        <th>Slogan</th>
                                         <th style="text-align:center;width:10%">Delete</th>
                                         <th style="text-align:center;width:10%">Edit</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($sanpham as $sp)
+                                    @foreach($slide as $sl)
                                     <tr class="odd gradeX">
-                                        <td>{{$sp->id}}</td>
-                                        <td>{{$sp->tensp}}</td>
-                                        <td>{{$sp->tenloaisp}}</td>
+                                        <td>{{$sl->id}}</td>
                                         <td>
-                                            <div class="modal fade" id="{{$sp->id}}" role="dialog">
+                                            <div class="modal fade" id="{{$sl->id}}" role="dialog">
                                                 <div class="modal-dialog">
                                                 <!-- Modal content-->
                                                     <div class="modal-content">
                                                         <div class="modal-body">
-                                                            <img src="upload/{{$sp->img}}" width="100%">
+                                                            <img src="upload/slides/{{$sl->link}}" width="100%">
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-danger" style="border-radius: 50%" data-dismiss="modal">X</button>
@@ -42,8 +41,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <a href="#" data-toggle="modal" data-target="#{{$sp->id}}">{{$sp->img}}</a>
+                                            <a href="#" data-toggle="modal" data-target="#{{$sl->id}}">{{$sl->link}}</a>
                                         </td>
+                                        <td>{{$sl->slogan}}</td>
                                         <td style="text-align:center">
                                             <a href="#">
                                                 <i class="fa fa-trash-o fa-fw"></i> Delete
