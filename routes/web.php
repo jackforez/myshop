@@ -49,5 +49,14 @@ Route::group(['prefix'=>'admin'],function(){
         Route::get('sua/{id}','cSlide@getEdit');
         Route::post('sua/{id}','cSlide@postEdit');
     });
+    Route::group(['prefix'=>'baiviet'],function(){
+        Route::get('danhsach','cBaiviet@getList');
+        
+        Route::get('them','cBaiviet@getAdd');
+        Route::post('them','cBaiviet@postAdd');
+
+        Route::get('sua/{id}','cBaiviet@getEdit');
+        Route::post('sua/{id}','cBaiviet@postEdit');
+    });
 });
 ?>
