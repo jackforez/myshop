@@ -34,6 +34,7 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="shop/css/util.css">
 	<link rel="stylesheet" type="text/css" href="shop/css/main.css">
+	<link rel="stylesheet" type="text/css" href="shop/css/mycss.css">
 <!--===============================================================================================-->
 </head>
 @include('page.layout.header')

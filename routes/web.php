@@ -8,15 +8,17 @@ Route::get('/', function () {
 //     'as'=>'trang-chu',
 //     'uses'=>'myctl@gTrangchu'
 // ]);
-Route::get('trangchu', function(){
-    return view('page.layout.index');
-});
+// Route::get('trangchu', function(){
+//     return view('page.layout.index');
+// });
 Route::get('trangad',function(){
     return view('admin.layout.index');
 });
 
 Route::group(['prefix'=>'page'],function(){
-    Route::get('danhsach','cSanpham@fgetList');
+    Route::get('trangchu','pagecontroller@getTrangchu');
+    Route::get('chitiet/{id}','pagecontroller@getChitiet');
+    Route::post('chitiet/{id}','pagecontroller@postChitiet');
 
 });
 
