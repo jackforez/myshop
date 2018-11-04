@@ -76,8 +76,6 @@
       </div>
    </div>
 
-    
-
    @endforeach 
 </div>
 <div class="row">{{$sanpham->links()}}</div>
