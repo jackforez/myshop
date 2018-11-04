@@ -5,7 +5,7 @@
       <div class="wrap-slick1">
          <div class="slick1">
             @foreach($slide as $sl)
-            <div class="item-slick1" style="background-image: url(upload/slide/{{$sl->link}});">
+            <div class="item-slick1" style="background-image: url(upload/slides/{{$sl->link}});">
                <div class="container h-full">
                   <div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
                      <div class="layer-slick1 animated visible-false" data-appear="lightSpeedIn" data-delay="800">
@@ -29,20 +29,20 @@
 <section class="bg0 p-t-23 p-b-140">
 <div class="container">
 <div class="p-b-10">
-   <h3 class="ltext-103 cl5">
-      Danh sách sản phẩm
-   </h3>
+   <h2 class="cl5">
+      <b>Danh sách sản phẩm</b>
+   </h2>
 </div>
 <div class="flex-w flex-sb-m p-b-52">
    <div class="flex-w flex-l-m filter-tope-group m-tb-10">
-      <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1" data-filter="*">
-      Tất cả
+      <button class="cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1" data-filter="*">
+        <h5>Tất cả</h5>
       </button>
-      <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".women">
-      Vòng gỗ
+      <button class="cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".women">
+        <h5>Vòng gỗ</h5>
       </button>
-      <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".men">
-      Vòng đá
+      <button class="cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".men">
+        <h5>Bi lăn tay</h5>
       </button>
    </div>
 </div>
@@ -54,7 +54,7 @@
          <div class="block2-pic hov-img0">
             <img src="upload/{{$sp->img}}" alt="IMG-PRODUCT">
             <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1" data-toggle="modal" data-target="#modal1">
-            Xem nhanh
+              Xem nhanh
             </a>
          </div>
          <div class="block2-txt flex-w flex-t p-t-14">

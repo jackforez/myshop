@@ -8,7 +8,8 @@
             <nav class="limiter-menu-desktop container">
                <!-- Logo desktop -->		
                <a href="#" class="logo">
-               <img src="shop/images/icons/logo-01.png" alt="IMG-LOGO">
+               <!-- <img src="shop/images/icons/logo-01.png" alt="IMG-LOGO"> -->
+                  vòng tay phong thủy
                </a>
                <!-- Menu desktop -->
                <div class="menu-desktop">
@@ -46,7 +47,8 @@
       <div class="wrap-header-mobile">
          <!-- Logo moblie -->		
          <div class="logo-mobile">
-            <a href="index.html"><img src="shop/images/icons/logo-01.png" alt="IMG-LOGO"></a>
+            <!-- <a href="index.html"><img src="shop/images/icons/logo-01.png" alt="IMG-LOGO"></a> -->
+            vòng tay phong thủy
          </div>
          <!-- Icon header -->
          <div class="wrap-icon-header flex-w flex-r-m m-r-15">
@@ -118,21 +120,21 @@
             <ul class="header-cart-wrapitem w-full">
                <li class="header-cart-item flex-w flex-t m-b-12">
                   <div class="header-cart-item-img">
-                     <img src="shop/images/item-cart-01.jpg" alt="IMG">
+                     <img src="upload/0aqn__1 (13).jpg" alt="IMG">
                   </div>
                   <div class="header-cart-item-txt p-t-8">
                      <a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
                      	<h5>Tên sản phẩm</h5>
                      </a>
                      <span class="header-cart-item-info">
-                     số lượng x giá K
+                     1 x 100K
                      </span>
                   </div>
                </li>
             </ul>
             <div class="w-full">
                <div class="header-cart-total w-full p-tb-40">
-                  Tổng thiệt hại: Tổng tiền K
+                  Tổng thiệt hại: 100K
                </div>
                <div class="header-cart-buttons w-full">
                   <a href="shoping-cart.html" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
