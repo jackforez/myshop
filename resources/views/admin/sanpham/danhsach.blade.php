@@ -31,18 +31,18 @@
                                         <td>{{$sp->tensp}}</td>
                                         <td>{{$sp->tenloaisp}}</td>
                                         <td>
-                                            <div class="modal fade" id="modal" role="dialog">
+                                            <div class="modal fade" id="{{$sp->id}}" role="dialog">
                                                 <div class="modal-dialog">
                                                 <!-- Modal content-->
                                                     <div class="modal-content">
                                                         <div class="modal-body">
-                                                            <img src="upload/{{$sp->img}}" width="100%">
+                                                            <img src="upload/{{$sp->img}}" height="600px">
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
 
-                                             <div class="modal fade" id="modal1" role="dialog">
+                                             <div class="modal fade" id="{{$sp->id}}1" role="dialog">
                                                 <div class="modal-dialog">
                                                 <!-- Modal content-->
                                                     <div class="modal-content">
@@ -53,7 +53,7 @@
                                                 </div>
                                             </div>
 
-                                             <div class="modal fade" id="modal2" role="dialog">
+                                             <div class="modal fade" id="{{$sp->id}}2" role="dialog">
                                                 <div class="modal-dialog">
                                                 <!-- Modal content-->
                                                     <div class="modal-content">
@@ -65,19 +65,19 @@
                                             </div>
                                             
                                             @if($sp->img != "")
-                                                1: <a href="#" data-toggle="modal" data-target="#modal">{{$sp->img}}</a></br>
+                                                1: <a href="#" data-toggle="modal" data-target="#{{$sp->id}}">{{$sp->img}}</a></br>
                                             @else
                                                 1: <label style="color:red;">chưa có</label>     
                                             @endif                                            
                                             
                                             @if($sp->img1 != "")
-                                                2: <a href="#" data-toggle="modal" data-target="#modal1">{{$sp->img1}}</a></br>  
+                                                2: <a href="#" data-toggle="modal" data-target="#{{$sp->id}}1">{{$sp->img1}}</a></br>  
                                             @else
                                                 2:<label style="color:red;">chưa có</label></br> 
                                             @endif         
                                                 
                                             @if($sp->img2 != "")
-                                                3:<a href="#" data-toggle="modal" data-target="#modal2">{{$sp->img2}}</a></br>
+                                                3:<a href="#" data-toggle="modal" data-target="#{{$sp->id}}2">{{$sp->img2}}</a></br>
                                             @else
                                                 3: <label style="color:red;">chưa có</label></br>
                                             @endif         
@@ -108,7 +108,4 @@
             </div>
             <!-- /.row -->
         </div>
-
 @endsection
-test github
-test phat nua
