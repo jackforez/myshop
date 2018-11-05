@@ -36,7 +36,7 @@
                                                 <!-- Modal content-->
                                                     <div class="modal-content">
                                                         <div class="modal-body">
-                                                            <img src="upload/{{$sp->img}}" height="600px">
+                                                            <img src="upload/{{$sp->img}}" width="100%">
                                                         </div>
                                                     </div>
                                                 </div>

@@ -7,17 +7,19 @@
     display:none;
     color:#fff;
 }
+.my-modal1{
+  margin-top: 100px;
+}
 .my-modal-dialog {
-    height:50%;
-    margin: auto 0;
-    padding: 0;
+    width: 100%;
+    margin: 0px auto;
   }
   
-  .my-modal-content {
+.my-modal-content {
     height: auto;
     height: 100%;
     border-radius: 0;
   }
-  .test{
+.test{
     color: green;
-  }
+}
