@@ -19,7 +19,7 @@ class cSanpham extends Controller
         $sanpham = DB::table('tblSanpham')
                 ->join('tblLoaisp','tblSanpham.maloaisp','=','tblLoaisp.id')
                 ->select('tblSanpham.*','tblLoaisp.tenloaisp')
-                ->paginate(10);
+                ->paginate(5);
         return view('admin.sanpham.danhsach',['sanpham'=>$sanpham]);
     }
 
@@ -28,6 +28,7 @@ class cSanpham extends Controller
         return view('admin.sanpham.them',['loaisp'=>$loaisp]);
     }
     public function postAdd(Request $req){
+
         $this->validate($req,[
             'ten'=>'required|unique:tblSanpham,tensp|min:3|max:100|',
         ],
@@ -54,12 +55,39 @@ class cSanpham extends Controller
                 $file->move('upload',$hinh);
                 $sp->img = $hinh;
             }
-            
         else{
-            echo ' ko co file ';
-            $hinh = "";
+            $sp->img = "";
         }
-        
+        if($req->hasFile('hinh1'))
+            {
+                $file = $req->file('hinh1');
+                $fname = $file->getClientOriginalName();
+                $hinh = str_random(4)."__".$fname;
+                while(file_exists('upload/'.$hinh)){
+                    $hinh = str_random(4)."__".$fname;
+                }
+                $file->move('upload',$hinh);
+                $sp->img1 = $hinh;
+            }  
+            else{
+                $sp->img1 = "";
+            }                      
+            
+            if($req->hasFile('hinh2'))
+            {
+                $file = $req->file('hinh2');
+                $fname = $file->getClientOriginalName();
+                $hinh = str_random(4)."__".$fname;
+                while(file_exists('upload/'.$hinh)){
+                    $hinh = str_random(4)."__".$fname;
+                }
+                $file->move('upload',$hinh);
+                $sp->img2 = $hinh;
+            }
+            else{
+                $sp->img2 = "";
+            }    
+            
         $sp->save();
         return redirect('admin/sanpham/them')->with('thongbao','Thêm thành công rồi !');
    }
@@ -82,9 +110,57 @@ class cSanpham extends Controller
             'ten.min'=>'Tên quá ngắn, độ dài 3-100 ký tự',
             'ten.max'=>'tên quá dài, độ dài 3-100 ký tự'
         ]);
-        $sanpham = mSanpham::find($id);
-        $sanpham->tensp = $req->ten;
-        // $sanpham->save();
+        $sp = mSanpham::find($id);
+        $sp->tensp = $req->ten;
+        $sp->maloaisp = $req->loai;
+        $sp->giasp = $req->gia;
+        $sp->giakm = $req->km;
+        $sp->mota = $req->mota;
+        if($req->hasFile('hinh'))
+            {
+                $file = $req->file('hinh');
+                $fname = $file->getClientOriginalName();
+                $hinh = str_random(4)."__".$fname;
+                while(file_exists('upload/'.$hinh)){
+                    $hinh = str_random(4)."__".$fname;
+                }
+                $file->move('upload',$hinh);
+                $sp->img = $hinh;
+            }
+        else{
+            $sp->img = "";
+        }
+        if($req->hasFile('hinh1'))
+            {
+                $file = $req->file('hinh1');
+                $fname = $file->getClientOriginalName();
+                $hinh = str_random(4)."__".$fname;
+                while(file_exists('upload/'.$hinh)){
+                    $hinh = str_random(4)."__".$fname;
+                }
+                $file->move('upload',$hinh);
+                $sp->img1 = $hinh;
+            }  
+            else{
+                $sp->img1 = "";
+            }                      
+            
+            if($req->hasFile('hinh2'))
+            {
+                $file = $req->file('hinh2');
+                $fname = $file->getClientOriginalName();
+                $hinh = str_random(4)."__".$fname;
+                while(file_exists('upload/'.$hinh)){
+                    $hinh = str_random(4)."__".$fname;
+                }
+                $file->move('upload',$hinh);
+                $sp->img2 = $hinh;
+            }
+            else{
+                $sp->img2 = "";
+            }    
+            
+        $sp->save();
         return redirect('admin/sanpham/sua/'.$id)->with('thongbao','Sửa thành công rồi !');
     }
 }

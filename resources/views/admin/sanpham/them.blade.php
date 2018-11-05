@@ -45,6 +45,8 @@
                             <input class="form-control" placeholder="Nhập mô tả sản phẩm ở đây" name="mota">
                             <label>Hình ảnh của sản phẩm</label>
                             <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" name="hinh">
+                            <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" name="hinh1">
+                            <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" name="hinh2">
                         </div>
                         <button type="submit" class="btn btn-default">Thêm</button>
                         <button type="reset" class="btn btn-default">Nhập lại</button>

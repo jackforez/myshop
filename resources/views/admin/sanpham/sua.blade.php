@@ -1,6 +1,6 @@
 @extends('admin.layout.index')
 @section('content')
-<<div id="page-wrapper">
+<div id="page-wrapper">
    <div class="row">
       <div class="col-lg-12">
          <h1 class="page-header">Sửa thông tin sản phẩm</h1>
@@ -26,12 +26,12 @@
                         {{session('thongbao')}}
                      </div>
                      @endif
-                     <form action="admin/sanpham/them" method="POST" enctype="multipart/form-data">
+                     <form action="admin/sanpham/sua/{{$sanpham->id}}" method="POST" enctype="multipart/form-data">
                         <input type="hidden" name="_token" value="{{csrf_token()}}" >
                         <div class="form-group">
-                            <label>Tên cũ: {{$sanpham->tensp}}</label>
-                            <input class="form-control" placeholder="Nhập tên mới ở đây" name="ten">
-                            <label>Loại cũ</label>
+                            <label>Tên cũ</label>
+                            <input class="form-control" name="ten" value="{{$sanpham->tensp}}">
+                            <label>Loại sản phẩm</label>
                             <select class="form-control" name="loai">
                                 @foreach($loaisp as $lsp)
                                     @if($lsp->id != $sanpham->maloaisp)
@@ -41,14 +41,16 @@
                                     @endif
                                 @endforeach
                             </select>
-                            <label>Giá sản phẩm: {{$sanpham->giasp}}</label>
-                            <input class="form-control" placeholder="Nhập giá mới của sản phẩm ở đây, nếu không nhập sẽ lấy giá cũ" name="gia">
-                            <label>Khuyến mãi: {{$sanpham->giakm}}</label>
-                            <input class="form-control" placeholder="Nhập số tiền sẽ khuyễn mãi, mặc định là 0, nếu không nhập sẽ lấy giá cũ" name="km">
+                            <label>Giá sản phẩm</label>
+                            <input class="form-control" name="gia" value="{{$sanpham->giasp}}">
+                            <label>Khuyến mãi</label>
+                            <input class="form-control" name="km" value="{{$sanpham->giakm}}">
                             <label>Mô tả về sản phẩm</label>
-                            <input class="form-control" placeholder="Nhập mô tả sản phẩm ở đây,nếu không nhập sẽ lấy mô tả cũ" name="mota">
-                            <label>Hình ảnh của sản phẩm: {{$sanpham->img}}</label>
-                            <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" name="hinh">
+                            <input class="form-control" name="mota" value="{{$sanpham->mota}}">
+                            <label style="margin-top:10px;">Thay đổi hình ảnh của sản phẩm bằng cách chọn các nút bên dưới</label>
+                            <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" name="hinh" value="{{$sanpham->img}}">
+                            <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" name="hinh1" value="{{$sanpham->img1}}">
+                            <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" name="hinh2" value="{{$sanpham->img2}}">
                         </div>
                         <button type="submit" class="btn btn-default">Thêm</button>
                         <button type="reset" class="btn btn-default">Nhập lại</button>

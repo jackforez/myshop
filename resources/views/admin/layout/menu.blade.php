@@ -24,9 +24,6 @@
                   <li>
                      <a href="admin/sanpham/them">Thêm mới</a>
                   </li>
-                  <li>
-                     <a href="admin/sanpham/sua">Sửa</a>
-                  </li>
                </ul>
             </li>
             <!-- / .sản phẩm -->

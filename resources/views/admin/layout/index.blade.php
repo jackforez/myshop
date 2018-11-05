@@ -23,7 +23,14 @@
     <!-- Morris Charts CSS -->
     <link href="admin/vendor/morrisjs/morris.css" rel="stylesheet">
     <link rel="stylesheet" href="admin/dist/css/mycss.css">
-
+    <!-- <style>
+        .custom-file-input ~ .custom-file-label::after {
+            content: "Chọn file bạn muốn";
+            border: 1px solid gray;
+            border-radius: 3px;
+            padding: 5px;
+        }
+    </style> -->
     <!-- Custom Fonts -->
     <link href="admin/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
