@@ -9,6 +9,18 @@
             </div>
             <!-- /.row -->
             <div class="row">
+            @if(count($errors)>0)
+                     <div class="alert alert-danger">    
+                        @foreach($errors->all() as $e)
+                        {{$e}}</br>
+                        @endforeach
+                     </div>
+                     @endif
+                     @if(session('thongbao'))
+                     <div class="alert alert-success">
+                        {{session('thongbao')}}
+                     </div>
+                     @endif
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <!-- /.panel-heading -->

@@ -161,6 +161,6 @@ class cSanpham extends Controller
             }    
             
         $sp->save();
-        return redirect('admin/sanpham/sua/'.$id)->with('thongbao','Sửa thành công rồi !');
+        return redirect('admin/sanpham/danhsach')->with('thongbao','Sửa thành công rồi !');
     }
 }
