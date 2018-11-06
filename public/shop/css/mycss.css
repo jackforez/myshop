@@ -7,18 +7,20 @@
     display:none;
     color:#fff;
 }
-.my-modal1{
-  margin-top: 100px;
+.my-modal{
+  background-color: black;
 }
 .my-modal-dialog {
     width: 100%;
     margin: 0px auto;
+    background-color: red;
   }
   
 .my-modal-content {
     height: auto;
     height: 100%;
     border-radius: 0;
+    background-color: green;
   }
 .test{
     color: green;

@@ -1,4 +1,11 @@
 @extends('page.layout.index')
+<style>
+	.bg{
+    /* Center and scale the image nicely */
+    background-position: left top;
+    background-repeat: no-repeat;
+	}
+</style>
 @section('content')
 <!-- Slider -->
 <section class="section-slide">
@@ -48,13 +55,37 @@
 </div>
 <div class="row isotope-grid">
 	@foreach($sanpham as $sp)
-	<!-- modal1 -->
-
-	<!-- <div class="wrap-modal1 js-modal1 p-t-60 p-b-20" id="{{$sp->id}}"> modal dang lam
-		<div class="overlay-modal1 js-hide-modal1"></div>-->
-		
-	<div class="modal" id="myModal{{$sp->id}}">
-		<div class="modal-dialog modal-lg m-t-80">
+	
+	<!-- items -->
+	<div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item">
+		<!-- Block2 -->
+		<div class="block2">
+			<div class="block2-pic hov-img0">
+				<img src="upload/{{$sp->img}}" alt="IMG-PRODUCT">
+				<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1" data-toggle="modal" data-target="#{{$sp->id}}">
+				Xem nhanh
+				</a>
+			</div>
+			<div class="block2-txt flex-w flex-t p-t-14">
+				<div class="block2-txt-child1 flex-col-l ">
+					<a href="page/chitiet/{{$sp->id}}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+					{{$sp->tensp}}
+					</a>
+					<span class="stext-105 cl3">
+					{{$sp->giasp}}
+					</span>
+				</div>
+				<div class="block2-txt-child2 flex-r p-t-3">
+					<a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+					<img class="icon-heart1 dis-block trans-04" src="shop/images/icons/icon-heart-01.png" alt="ICON">
+					<img class="icon-heart2 dis-block trans-04 ab-t-l" src="shop/images/icons/icon-heart-02.png" alt="ICON">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal" id="{{$sp->id}}" style="background-color:black;z-index:9999;">
+		<div class="modal-dialog modal-lg">
 			<div class="container">
 				<div class="bg0 p-t-60 p-b-30 p-lr-15-lg how-pos3-parent">
 					<button class="how-pos3 hov3 trans-04" data-dismiss="modal">
@@ -67,9 +98,9 @@
 									<div class="wrap-slick3-dots"></div>
 									<div class="wrap-slick3-arrows flex-sb-m flex-w"></div>
 									<div class="slick3 gallery-lb">
-										<div class="item-slick3" data-thumb="upload/{{$sp->img1}}">
-											<div class="wrap-pic-w pos-relative">
-												<img src="upload/{{$sp->img}}" alt="{{$sp->img}}">
+										<div class="item-slick3" data-thumb="upload/{{$sp->img}}">
+											<div class="wrap-pic-w pos-relative" >
+												<img src="upload/{{$sp->img}}" alt="IMG-PRODUCT">
 												<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="upload/{{$sp->img}}">
 												<i class="fa fa-expand"></i>
 												</a>
@@ -85,7 +116,7 @@
 										</div>
 										<div class="item-slick3" data-thumb="upload/{{$sp->img2}}">
 											<div class="wrap-pic-w pos-relative">
-												<img src="upload/{{$sp->img2}}" alt="IMG-PRODUCT">
+												<img src="upload/{{$sp->img2}}" alt="hình ảnh sản phẩm">
 												<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="upload/{{$sp->img2}}">
 												<i class="fa fa-expand"></i>
 												</a>
@@ -122,7 +153,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="flex-w flex-c-m respon7">
+								<div class="flex-w flex-c-m">
 									<button class="btn btn-primary hov-btn1 p-lr-15 trans-04 js-addcart-detail form-control" >
 										Thêm vào giỏ hàng
 									</button>
@@ -133,37 +164,8 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	<!-- items -->
-	<div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item">
-		<!-- Block2 -->
-		<div class="block2">
-			<div class="block2-pic hov-img0">
-				<img src="upload/{{$sp->img}}" alt="IMG-PRODUCT">
-				<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1" data-toggle="modal" data-target="#myModal{{$sp->id}}">
-				Xem nhanh
-				</a>
-			</div>
-			<div class="block2-txt flex-w flex-t p-t-14">
-				<div class="block2-txt-child1 flex-col-l ">
-					<a href="page/chitiet/{{$sp->id}}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-					{{$sp->tensp}}
-					</a>
-					<span class="stext-105 cl3">
-					{{$sp->giasp}}
-					</span>
-				</div>
-				<div class="block2-txt-child2 flex-r p-t-3">
-					<a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-					<img class="icon-heart1 dis-block trans-04" src="shop/images/icons/icon-heart-01.png" alt="ICON">
-					<img class="icon-heart2 dis-block trans-04 ab-t-l" src="shop/images/icons/icon-heart-02.png" alt="ICON">
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
+	</div> 
 	@endforeach 
 </div>
 <div class="row">{{$sanpham->links()}}</div>
-<!-- Modal1 -->
 @endsection
