@@ -1,11 +1,4 @@
 @extends('page.layout.index')
-<style>
-	.bg{
-	/* Center and scale the image nicely */
-	background-position: left top;
-	background-repeat: no-repeat;
-	}
-</style>
 @section('content')
 <!-- Slider -->
 <section class="section-slide">
@@ -13,7 +6,7 @@
 		<div class="slick1">
 			@foreach($slide as $sl)
 			<div class="item-slick1" style="background-image: url(upload/slides/{{$sl->link}});">
-				<div class="container h-full">
+				<div class="container">
 					<div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
 						<div class="layer-slick1 animated visible-false" data-appear="lightSpeedIn" data-delay="800">
 							<h2 class="ltext-201 cl2 p-t-19 p-b-43 respon1">
@@ -83,7 +76,8 @@
 			</div>
 		</div>
 	</div>
-	<!-- <div class="modal" id="{{$sp->id}}" style="background-color:black;z-index:9999;">
+	<!-- modal -->
+	<div class="modal" id="{{$sp->id}}" style="background-color:black;z-index:9999;">
 		<div class="modal-dialog modal-lg">
 			<div class="container">
 				<div class="bg0 p-t-60 p-b-30 p-lr-15-lg how-pos3-parent">
@@ -96,7 +90,7 @@
 								<div class="wrap-slick3 flex-sb flex-w">
 									<div class="wrap-slick3-dots"></div>
 									<div class="wrap-slick3-arrows flex-sb-m flex-w"></div>
-									<div class="slick3 gallery-lb">
+									<div class="slick3 gallery-lb" style="background-image: url('upload/{{$sp->img}}');background-repeat: no-repeat;">
 										<div class="item-slick3" data-thumb="shop/upload/{{$sp->img}}">
 											<div class="wrap-pic-w pos-relative" >
 												<img src="upload/{{$sp->img}}" alt="IMG-PRODUCT">
@@ -163,94 +157,7 @@
 				</div>
 			</div>
 		</div>
-		</div>  -->
-	<!-- Modal1 -->
-	<div class="modal" id="{{$sp->id}}" style="background-color:black;z-index:9999;">
-		<div class="modal-dialog modal-lg p-t-30">
-			<div class="modal-content">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-7">
-							<!--Carousel Wrapper-->
-							<div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
-								<!--Indicators-->
-								<ol class="carousel-indicators">
-									<li data-target="#carousel-example-1z" data-slide-to="0" class="active" style="color:red;"></li>
-									<li data-target="#carousel-example-1z" data-slide-to="1"></li>
-									<li data-target="#carousel-example-1z" data-slide-to="2"></li>
-								</ol>
-								<!--/.Indicators-->
-								<!--Slides-->
-								<div class="carousel-inner" role="listbox">
-									<!--First slide-->
-									<div class="carousel-item active">
-										<img class="d-block w-100" src="upload/{{$sp->img}}" alt="First slide">
-									</div>
-									<!--/First slide-->
-									<!--Second slide-->
-									<div class="carousel-item">
-										<img class="d-block w-100" src="upload/{{$sp->img1}}" alt="Second slide">
-									</div>
-									<!--/Second slide-->
-									<!--Third slide-->
-									<div class="carousel-item">
-										<img class="d-block w-100" src="upload/{{$sp->img2}}" alt="Third slide">
-									</div>
-									<!--/Third slide-->
-								</div>
-								<!--/.Slides-->
-								<!--Controls-->
-								<a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
-									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-									<span class="sr-only">Previous</span>
-								</a>
-								<a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
-									<span class="carousel-control-next-icon" aria-hidden="true"></span>
-									<span class="sr-only">Next</span>
-								</a>
-								<!--/.Controls-->
-							</div>
-							<!--/.Carousel Wrapper-->
-						</div>
-						<div class="col-md-5 col-lg-5 p-b-30">
-							<div class="p-t-5 p-lr-0-lg">
-								<h4 class="mtext-105 cl2 js-name-detail p-b-14">
-									{{$sp->tensp}}
-								</h4>
-								<span class="mtext-106 cl2">
-								{{$sp->giasp}}
-								</span>
-								<p class="stext-102 cl3 p-t-23">
-									{{$sp->mota}}
-								</p>
-								<div class="p-t-33">
-									<div class="flex-c-m p-b-10">
-										<div class="size-204 flex-w flex-c-m respon6-next" >
-											<div class="wrap-num-product flex-w m-tb-10" >
-												<div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
-													<i class="fs-16 zmdi zmdi-minus"></i>
-												</div>
-												<input class="mtext-104 cl3 txt-center num-product" type="number" name="num-product" value="1">
-												<div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
-													<i class="fs-16 zmdi zmdi-plus"></i>
-												</div>
-											</div>
-											
-										</div>
-									</div>
-								</div>
-								<div class="flex-w flex-c-m">
-									<button class="btn btn-primary hov-btn1 p-lr-15 trans-04 js-addcart-detail form-control" >
-										Thêm vào giỏ hàng
-									</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	</div> 
 	@endforeach 
 </div>
 <div class="row">{{$sanpham->links()}}</div>
