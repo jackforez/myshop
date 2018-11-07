@@ -1,9 +1,9 @@
 @extends('page.layout.index')
 <style>
 	.bg{
-    /* Center and scale the image nicely */
-    background-position: left top;
-    background-repeat: no-repeat;
+	/* Center and scale the image nicely */
+	background-position: left top;
+	background-repeat: no-repeat;
 	}
 </style>
 @section('content')
@@ -55,14 +55,13 @@
 </div>
 <div class="row isotope-grid">
 	@foreach($sanpham as $sp)
-	
 	<!-- items -->
 	<div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item">
 		<!-- Block2 -->
 		<div class="block2">
 			<div class="block2-pic hov-img0">
 				<img src="upload/{{$sp->img}}" alt="IMG-PRODUCT">
-				<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1" data-toggle="modal" data-target="#{{$sp->id}}">
+				<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04" data-toggle="modal" data-target="#{{$sp->id}}">
 				Xem nhanh
 				</a>
 			</div>
@@ -84,7 +83,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="modal" id="{{$sp->id}}" style="background-color:black;z-index:9999;">
+	<!-- <div class="modal" id="{{$sp->id}}" style="background-color:black;z-index:9999;">
 		<div class="modal-dialog modal-lg">
 			<div class="container">
 				<div class="bg0 p-t-60 p-b-30 p-lr-15-lg how-pos3-parent">
@@ -98,7 +97,7 @@
 									<div class="wrap-slick3-dots"></div>
 									<div class="wrap-slick3-arrows flex-sb-m flex-w"></div>
 									<div class="slick3 gallery-lb">
-										<div class="item-slick3" data-thumb="upload/{{$sp->img}}">
+										<div class="item-slick3" data-thumb="shop/upload/{{$sp->img}}">
 											<div class="wrap-pic-w pos-relative" >
 												<img src="upload/{{$sp->img}}" alt="IMG-PRODUCT">
 												<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="upload/{{$sp->img}}">
@@ -164,7 +163,94 @@
 				</div>
 			</div>
 		</div>
-	</div> 
+		</div>  -->
+	<!-- Modal1 -->
+	<div class="modal" id="{{$sp->id}}" style="background-color:black;z-index:9999;">
+		<div class="modal-dialog modal-lg p-t-30">
+			<div class="modal-content">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-7">
+							<!--Carousel Wrapper-->
+							<div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
+								<!--Indicators-->
+								<ol class="carousel-indicators">
+									<li data-target="#carousel-example-1z" data-slide-to="0" class="active" style="color:red;"></li>
+									<li data-target="#carousel-example-1z" data-slide-to="1"></li>
+									<li data-target="#carousel-example-1z" data-slide-to="2"></li>
+								</ol>
+								<!--/.Indicators-->
+								<!--Slides-->
+								<div class="carousel-inner" role="listbox">
+									<!--First slide-->
+									<div class="carousel-item active">
+										<img class="d-block w-100" src="upload/{{$sp->img}}" alt="First slide">
+									</div>
+									<!--/First slide-->
+									<!--Second slide-->
+									<div class="carousel-item">
+										<img class="d-block w-100" src="upload/{{$sp->img1}}" alt="Second slide">
+									</div>
+									<!--/Second slide-->
+									<!--Third slide-->
+									<div class="carousel-item">
+										<img class="d-block w-100" src="upload/{{$sp->img2}}" alt="Third slide">
+									</div>
+									<!--/Third slide-->
+								</div>
+								<!--/.Slides-->
+								<!--Controls-->
+								<a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+									<span class="sr-only">Previous</span>
+								</a>
+								<a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+									<span class="carousel-control-next-icon" aria-hidden="true"></span>
+									<span class="sr-only">Next</span>
+								</a>
+								<!--/.Controls-->
+							</div>
+							<!--/.Carousel Wrapper-->
+						</div>
+						<div class="col-md-5 col-lg-5 p-b-30">
+							<div class="p-t-5 p-lr-0-lg">
+								<h4 class="mtext-105 cl2 js-name-detail p-b-14">
+									{{$sp->tensp}}
+								</h4>
+								<span class="mtext-106 cl2">
+								{{$sp->giasp}}
+								</span>
+								<p class="stext-102 cl3 p-t-23">
+									{{$sp->mota}}
+								</p>
+								<div class="p-t-33">
+									<div class="flex-c-m p-b-10">
+										<div class="size-204 flex-w flex-c-m respon6-next" >
+											<div class="wrap-num-product flex-w m-tb-10" >
+												<div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
+													<i class="fs-16 zmdi zmdi-minus"></i>
+												</div>
+												<input class="mtext-104 cl3 txt-center num-product" type="number" name="num-product" value="1">
+												<div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
+													<i class="fs-16 zmdi zmdi-plus"></i>
+												</div>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="flex-w flex-c-m">
+									<button class="btn btn-primary hov-btn1 p-lr-15 trans-04 js-addcart-detail form-control" >
+										Thêm vào giỏ hàng
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	@endforeach 
 </div>
 <div class="row">{{$sanpham->links()}}</div>
