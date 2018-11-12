@@ -141,6 +141,8 @@
 	</script>
 <!--===============================================================================================-->
 	<script src="shop/js/main.js"></script>
+	<script src="shop/js/jquery-2.2.3.min.js"></script>
+	<script type='text/javascript' src="shop/js/jquery.mycart.js"></script>
 @yield('my-script')
 </body>
 </html>
