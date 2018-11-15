@@ -3,20 +3,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-// Route::get('trangchu',[
-//     'as'=>'trang-chu',
-//     'uses'=>'myctl@gTrangchu'
-// ]);
-// Route::get('trangchu', function(){
-//     return view('page.layout.index');
-// });
 Route::get('trangad',function(){
     return view('admin.layout.index');
 });
-Route::get('myshop',function(){
-    return view('shop1.shop');
-});
+
 Route::group(['prefix'=>'page'],function(){
     Route::get('trangchu','pagecontroller@getTrangchu');
     Route::get('chitiet/{id}','pagecontroller@getChitiet');

@@ -16,7 +16,7 @@
             </li>
             <!-- sản phẩm -->
             <li>
-               <a href="#"><i class="fa fa-cubes fa-fw"></i> Sản Phẩm<span class="fa arrow"></span></a>
+               <a href="#"><i class="fa fa-cube fa-fw"></i> Sản Phẩm<span class="fa arrow"></span></a>
                <ul class="nav nav-second-level">
                   <li>
                      <a href="admin/sanpham/danhsach">Danh sách</a>
