@@ -45,6 +45,8 @@ Route::group(['prefix'=>'admin'],function(){
 
         Route::get('sua/{id}','cSlide@getEdit');
         Route::post('sua/{id}','cSlide@postEdit');
+
+        Route::get('xoa/{id}','cSlide@getDelete');
     });
     Route::group(['prefix'=>'baiviet'],function(){
         Route::get('danhsach','cBaiviet@getList');

@@ -12,6 +12,11 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <!-- /.panel-heading -->
+                        @if(session('thongbaoxoa'))
+                            <div class="alert alert-success">
+                                {{session('thongbaoxoa')}}
+                            </div>
+                        @endif
                         <div class="panel-body">
                             <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>
@@ -45,12 +50,12 @@
                                         </td>
                                         <td>{{$sl->slogan}}</td>
                                         <td style="text-align:center">
-                                            <a href="#">
+                                            <a href="admin/slide/xoa/{{$sl->id}}">
                                                 <i class="fa fa-trash-o fa-fw"></i> Delete
                                             </a>
                                         </td>
                                         <td style="text-align:center">
-                                            <a href="#">
+                                            <a href="admin/slide/sua/{{$sl->id}}">
                                                 <i class="fa fa-pencil fa-fw"></i> Edit
                                             </a>
                                         </td>
