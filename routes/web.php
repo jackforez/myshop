@@ -23,6 +23,9 @@ Route::group(['prefix'=>'admin'],function(){
 
         Route::get('sua/{id}','cLoaisp@getEdit');
         Route::post('sua/{id}','cLoaisp@postEdit');
+
+        Route::get('xoa/{id}','cLoaisp@getDelete');
+        Route::post('xoa/{id}','cLoaisp@postDelete');
     });
     
     Route::group(['prefix'=>'sanpham'],function(){

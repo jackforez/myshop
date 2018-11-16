@@ -13,6 +13,11 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <!-- /.panel-heading -->
+                        @if(session('thongbao'))
+                            <div class="alert alert-success">
+                                {{session('thongbao')}}
+                            </div>
+                        @endif
                         <div class="panel-body">
                             <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>
@@ -29,7 +34,7 @@
                                         <td>{{$lsp->id}}</td>
                                         <td>{{$lsp->tenloaisp}}</td>
                                         <td style="text-align:center">
-                                            <a href="#">
+                                            <a href="admin/loaisp/xoa/{{$lsp->id}}">
                                                 <i class="fa fa-trash-o fa-fw"></i> Delete
                                             </a>
                                         </td>

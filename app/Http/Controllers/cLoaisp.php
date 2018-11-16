@@ -50,6 +50,14 @@ class cLoaisp extends Controller
         $loaisp = mLoaisp::find($id);
         $loaisp->tenloaisp = $req->ten;
         $loaisp->save();
-        return redirect('admin/loaisp/sua/'.$id)->with('thongbao','Sửa thành công rồi !');
+        return redirect('admin/loaisp/sua/'.$id)->with('thongbao','Sửa thành công!');
+    }
+    public function getDelete($id){
+        $loaisp = mLoaisp::find($id);
+        $loaisp->delete();
+        return back()->with('thongbao','Xóa thành công!');
+    }
+    public function postDelete(){
+
     }
 }
