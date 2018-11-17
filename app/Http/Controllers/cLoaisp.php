@@ -17,15 +17,15 @@ class cLoaisp extends Controller
         return view('admin.loaisp.them');
     }
     public function postAdd(Request $req){
-        // $this->validate($req,[
-        //     'ten'=>'required|min:3|max:100|unique:tblLoaisp,tenloaisp'
-        // ],
-        // [
-        //     'ten.required'=>'Chưa nhập tên sản phẩm',
-        //     'ten.min'=>'Tên quá ngắn, độ dài 3-100 ký tự',
-        //     'ten.max'=>'tên quá dài, độ dài 3-100 ký tự',
-        //     'ten.unique'=>'ten da co'
-        // ]);
+        $this->validate($req,[
+            'ten'=>'required|min:3|max:100|unique:tblLoaisp,tenloaisp'
+        ],
+        [
+            'ten.required'=>'Chưa nhập tên sản phẩm',
+            'ten.min'=>'Tên quá ngắn, độ dài 3-100 ký tự',
+            'ten.max'=>'tên quá dài, độ dài 3-100 ký tự',
+            'ten.unique'=>'ten da co'
+        ]);
         $loaisp = new mLoaisp;
         $loaisp->tenloaisp = $req->ten;
         $loaisp->save();

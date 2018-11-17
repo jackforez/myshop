@@ -7,7 +7,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Trang quản trị tên_shop</a>
+      <a class="navbar-brand" href="page/trangchu">Trang quản trị tên_shop</a>
    </div>
    <!-- /.navbar-header -->
    <ul class="nav navbar-top-links navbar-right">

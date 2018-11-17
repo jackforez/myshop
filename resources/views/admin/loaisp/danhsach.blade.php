@@ -11,13 +11,14 @@
             <!-- /.row -->
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="panel panel-default">
-                        <!-- /.panel-heading -->
-                        @if(session('thongbao'))
+                 <!-- /.panel-heading -->
+                    @if(session('thongbao'))
                             <div class="alert alert-success">
                                 {{session('thongbao')}}
                             </div>
-                        @endif
+                    @endif
+                    <div class="panel panel-default">
+                       
                         <div class="panel-body">
                             <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>

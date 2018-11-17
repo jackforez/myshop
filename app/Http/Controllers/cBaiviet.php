@@ -7,7 +7,7 @@ use App\mBaiviet;
 class cBaiviet extends Controller
 {
     public function getList(){
-        $baiviet= mBaiviet::all();
+        $baiviet= mBaiviet::where('id','>',0)->paginate(5);
         return view('admin.baiviet.danhsach',['baiviet'=>$baiviet]);
     }
     public function getEdit(){
