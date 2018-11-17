@@ -45,10 +45,10 @@
                <a href="#"><i class="fa fa-file-text fa-fw"></i>Bài viết<span class="fa arrow"></span></a>
                <ul class="nav nav-second-level">
                   <li>
-                     <a href="#">Danh sách</a>
+                     <a href="admin/baiviet/danhsach">Danh sách</a>
                   </li>
                   <li>
-                     <a href="#">Thêm mới</a>
+                     <a href="admin/baiviet/them">Thêm mới</a>
                   </li>
                </ul>
             </li>
