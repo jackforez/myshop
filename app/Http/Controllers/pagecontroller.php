@@ -18,4 +18,7 @@ class pagecontroller extends Controller
         $sanpham = mSanpham::find($id);
         return view('page.chitiet',['sanpham'=>$sanpham]);
     }
+    public function getAddToCart(Request $req,$id){
+        dd($req);
+    }
 }
