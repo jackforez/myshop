@@ -16,12 +16,12 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         view()->composer('header',function($view){
-            $loaisp= mLoaisp::all();
             if(Session('cart')){
                 $oldCart = Session::get('cart');
                 $cart = new Cart($oldCart);
             }
-            $view->with(['loaisp',$loaispm,'cart'=>Session::get('cart'),'product_cart'=>$cart->items,'totalPrice'=>$cart->totalPrice,'totalQty'=>$cart->totalQty]);
+            $view->with(['cart'=>Session::get('cart'),'myList'=>$cart->items,'totalPrice'=>$cart->totalPrice,'totalQty'=>$cart->totalQty]);
+            dd($cart->items);
         });
     }
 

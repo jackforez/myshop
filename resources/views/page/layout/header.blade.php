@@ -29,18 +29,20 @@
                   </ul>
                </div>
                <!-- Icon header -->
-               @if(Session::has('cart'))
-                  cos
-               @else
-                  nos
-               @endif
+             
                <div class="wrap-icon-header flex-w flex-r-m">
                   <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
                      <i class="zmdi zmdi-search"></i>
                   </div>
-                  <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" data-notify="0">
-                     <i class="zmdi zmdi-shopping-cart my-cart-icon"></i>
-                  </div>
+                  @if(Session::has('cart'))
+                     <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" data-notify="{{Session('cart')->totalQty}}">
+                        <i class="zmdi zmdi-shopping-cart my-cart-icon"></i>
+                     </div>
+                  @else
+                     <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" data-notify="0">
+                        <i class="zmdi zmdi-shopping-cart my-cart-icon"></i>
+                     </div>
+                  @endif
                   <a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti" data-notify="0">
                   <i class="zmdi zmdi-favorite-outline"></i>
                   </a>
@@ -121,6 +123,7 @@
                <i class="zmdi zmdi-close"></i>
             </div>
          </div>
+         @if(Session::has('cart'))
          <div class="header-cart-content flex-w js-pscroll">
             <ul class="header-cart-wrapitem w-full">
                <li class="header-cart-item flex-w flex-t m-b-12">
@@ -129,7 +132,7 @@
                   </div>
                   <div class="header-cart-item-txt p-t-8">
                      <a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
-                     	<h5>Tên sản phẩm</h5>
+                     	<h5></h5>
                      </a>
                      <span class="header-cart-item-info">
                      1 x 100K
@@ -142,11 +145,14 @@
                   Tổng thiệt hại: 100K
                </div>
                <div class="header-cart-buttons w-full">
-                  <a href="shoping-cart.html" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
+                  <a href="" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
 					<b>chi tiết</b>
 				  </a>
                </div>
             </div>
          </div>
+         @else
+            Chưa có sản phẩm nào trong giỏ hàng!
+         @endif
       </div>
    </div>

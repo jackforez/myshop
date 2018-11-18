@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 use App\mSanpham;
 use App\mSlide;
+use App\Cart;
 use DB;
+use Session;
 use Illuminate\Http\Request;
 
 class pagecontroller extends Controller
@@ -19,6 +21,12 @@ class pagecontroller extends Controller
         return view('page.chitiet',['sanpham'=>$sanpham]);
     }
     public function getAddToCart(Request $req,$id){
-        dd($req);
+        $data = mSanpham::find($id);
+        $oldCart = Session('cart')?Session::get('cart'):null;
+        $cart = new Cart($oldCart);
+        $cart->add($data,$id);
+        $req->Session()->put('cart',$cart);
+       return redirect()->back();
+
     }
 }
