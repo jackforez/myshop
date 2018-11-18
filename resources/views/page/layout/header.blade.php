@@ -125,28 +125,30 @@
          </div>
          @if(Session::has('cart'))
          <div class="header-cart-content flex-w js-pscroll">
+            @foreach($myList as $l)
             <ul class="header-cart-wrapitem w-full">
                <li class="header-cart-item flex-w flex-t m-b-12">
-                  <div class="header-cart-item-img">
-                     <img src="upload/0aqn__1 (13).jpg" alt="IMG">
-                  </div>
+                  <a href="" class="header-cart-item-img">
+                     <img src="upload/{{$l['item']['img']}}" alt="IMG">
+                  </a>
                   <div class="header-cart-item-txt p-t-8">
-                     <a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
-                     	<h5></h5>
+                     <a href="page/cart/del/{{$l['item']['id']}}" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
+                     	<h5>{{$l['item']['tensp']}}</h5>
                      </a>
                      <span class="header-cart-item-info">
-                     1 x 100K
+                     {{$l['qty']}} x {{$l['item']['giasp']}}
                      </span>
                   </div>
                </li>
             </ul>
+            @endforeach
             <div class="w-full">
                <div class="header-cart-total w-full p-tb-40">
-                  Tổng thiệt hại: 100K
+                  TỔNG: {{$totalPrice}}
                </div>
                <div class="header-cart-buttons w-full">
-                  <a href="" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
-					<b>chi tiết</b>
+                  <a href="" class="flex-c-m cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
+					<b>CHI TIẾT ĐƠN HÀNG</b>
 				  </a>
                </div>
             </div>

@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use App\Cart;
+use App\mLoaisp;
 use Session;
 
 class AppServiceProvider extends ServiceProvider
@@ -15,13 +16,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer('header',function($view){
+        view()->composer('page.layout.header',function($view){
             if(Session('cart')){
                 $oldCart = Session::get('cart');
                 $cart = new Cart($oldCart);
+                $view->with(['cart'=>Session::get('cart'),'myList'=>$cart->items,'totalPrice'=>$cart->totalPrice,'totalQty'=>$cart->totalQty]);
             }
-            $view->with(['cart'=>Session::get('cart'),'myList'=>$cart->items,'totalPrice'=>$cart->totalPrice,'totalQty'=>$cart->totalQty]);
-            dd($cart->items);
         });
     }
 
