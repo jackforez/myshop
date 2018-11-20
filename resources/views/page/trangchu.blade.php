@@ -41,7 +41,7 @@
 		<button class="cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".vonggo">
 			<h5>Vòng gỗ</h5>
 		</button>
-		<button class="cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".bilawn">
+		<button class="cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".bilan">
 			<h5>Bi lăn tay</h5>
 		</button>
 	</div>
@@ -112,8 +112,8 @@
 							<div class="col-2">
 								<ul>
 									<li><img src="upload/{{$sp->img}}" alt="" width="75px"></li>
-									<li><img src="upload/{{$sp->img}}" alt="" width="75px"></li>
-									<li><img src="upload/{{$sp->img}}" alt="" width="75px"></li>
+									<li><img src="upload/{{$sp->img1}}" alt="" width="75px"></li>
+									<li><img src="upload/{{$sp->img2}}" alt="" width="75px"></li>
 								</ul>
 							</div>
 							<div class="col-6">
@@ -171,8 +171,8 @@
 			</div>
 			<div class="block2-txt flex-w flex-t p-t-14">
 				<div class="block2-txt-child1 flex-col-l ">
-					<!-- <a href="page/chitiet/{{$sp->id}}" class="cl13">{{$sp->tensp}}</a>
-					<h3 style="color:red;">{{$sp->giasp}}</h3> -->
+					<a href="page/chitiet/{{$sp->id}}">{{$sp->tensp}}</a>
+					<h4  style="color:orange;">{{$sp->giasp}}</h4>
 				</div>
 				<div class="block2-txt-child2 flex-r p-t-3">
 					<a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
