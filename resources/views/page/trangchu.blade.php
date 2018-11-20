@@ -171,10 +171,8 @@
 			</div>
 			<div class="block2-txt flex-w flex-t p-t-14">
 				<div class="block2-txt-child1 flex-col-l ">
-					<a href="page/chitiet/{{$sp->id}}" class="stext-104 cl5 hov-cl1 trans-04 js-name-b2 p-b-6">
-					{{$sp->tensp}}
-					</a>
-					<span>{{$sp->giasp}}</span>
+					<!-- <a href="page/chitiet/{{$sp->id}}" class="cl13">{{$sp->tensp}}</a>
+					<h3 style="color:red;">{{$sp->giasp}}</h3> -->
 				</div>
 				<div class="block2-txt-child2 flex-r p-t-3">
 					<a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
