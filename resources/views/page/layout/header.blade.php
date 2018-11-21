@@ -4,22 +4,32 @@
       <!-- Header desktop -->
       <div class="container-menu-desktop">
          <!-- Topbar -->
+			<div class="top-bar">
+				<div class="content-topbar flex-sb-m h-full container">
+					<div class="left-top-bar">
+					
+					</div>
+
+					<div class="right-top-bar flex-w h-full">
+					</div>
+				</div>
+			</div>
+
          <div class="wrap-menu-desktop">
             <nav class="limiter-menu-desktop container">
                <!-- Logo desktop -->		
-               <a href="#" class="logo">
-               <!-- <img src="shop/images/icons/logo-01.png" alt="IMG-LOGO"> -->
-                  vòng tay phong thủy
+               <a href="page/trangchu" class="logo">
+                  <img src="" alt="IMG-LOGO">
                </a>
                <!-- Menu desktop -->
                <div class="menu-desktop">
                   <ul class="main-menu">
                      <li class="active-menu">
-                        <a href="index.html">Trang chủ</a>
+                        <a href="page/trangchu">Trang chủ</a>
                      </li>  
-                     <!-- <li class="label1" data-label1="hot">
-                        <a href="shoping-cart.html">Features</a>
-                        </li> -->
+                     <li>
+                        <a href="shop/about.html">Bài viết</a>
+                     </li>
                      <li>
                         <a href="shop/about.html">Giới thiệu về shop</a>
                      </li>
@@ -44,8 +54,11 @@
                      </div>
                   @endif
                   <a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti" data-notify="0">
-                  <i class="zmdi zmdi-favorite-outline"></i>
+                     <i class="zmdi zmdi-favorite-outline"></i>
                   </a>
+                  <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-cart">
+						   <i class="zmdi zmdi-account"></i>
+				      </div>
                </div>
             </nav>
          </div>
@@ -54,8 +67,7 @@
       <div class="wrap-header-mobile">
          <!-- Logo moblie -->		
          <div class="logo-mobile">
-            <!-- <a href="index.html"><img src="shop/images/icons/logo-01.png" alt="IMG-LOGO"></a> -->
-            vòng tay phong thủy
+            <a href="page/trangchu"><img src="shop/images/icons/logo-01.png" alt="IMG-LOGO"></a>
          </div>
          <!-- Icon header -->
          <div class="wrap-icon-header flex-w flex-r-m m-r-15">
@@ -66,8 +78,11 @@
                <i class="zmdi zmdi-shopping-cart"></i>
             </div>
             <a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti" data-notify="0">
-            <i class="zmdi zmdi-favorite-outline"></i>
+               <i class="zmdi zmdi-favorite-outline"></i>
             </a>
+            <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-cart">
+					<i class="zmdi zmdi-account"></i>
+				</div>
          </div>
          <!-- Button show menu -->
          <div class="btn-show-menu-mobile hamburger hamburger--squeeze">
@@ -78,24 +93,19 @@
       </div>
       <!-- Menu Mobile -->
       <div class="menu-mobile">
-         <ul class="main-menu-m">
+			<ul class="main-menu-m">
             <li>
-               <a href="index.html">Trang chủ</a>
-               <span class="arrow-main-menu-m">
-               <i class="fa fa-angle-right" aria-hidden="true"></i>
-               </span>
-            </li>
-            <li>
-               <a href="product.html">Tài khoản</a>
-            </li>
-            <li>
-               <a href="about.html">Giới thiệu</a>
-            </li>
-            <li>
-               <a href="contact.html">Liên hệ</a>
-            </li>
-         </ul>
-      </div>
+					<a href="about.html">Bài viết</a>
+				</li>
+				<li>
+					<a href="about.html">Giới thiệu</a>
+				</li>
+
+				<li>
+					<a href="contact.html">Liên hệ</a>
+				</li>
+			</ul>
+		</div>
       <!-- Modal Search -->
       <div class="modal-search-header flex-c-m trans-04 js-hide-modal-search">
          <div class="container-search-header">

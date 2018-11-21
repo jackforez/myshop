@@ -225,7 +225,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 [ Top bar ]*/
 .top-bar {
   height: 40px;
-  background-color: #222;
+  background-color: rgb(255, 255, 255);
 }
 
 /*---------------------------------------------*/
@@ -2040,6 +2040,7 @@ input.num-product::-webkit-inner-spin-button {
 
 /*//////////////////////////////////////////////////////////////////
 [ Block2 ]*/
+
 .block2-pic {
   position: relative;
 }

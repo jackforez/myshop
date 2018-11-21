@@ -171,8 +171,12 @@
 			</div>
 			<div class="block2-txt flex-w flex-t p-t-14">
 				<div class="block2-txt-child1 flex-col-l ">
-					<a href="page/chitiet/{{$sp->id}}">{{$sp->tensp}}</a>
-					<h4  style="color:orange;">{{$sp->giasp}}</h4>
+					<a href="page/chitiet/{{$sp->id}}" class="stext-301  hov-cl1 trans-04 js-name-b2 p-b-6">
+						{{$sp->tensp}}
+					</a>
+					<span class="mtext-103" style="color:#f48642;">
+						<strong>{{$sp->giasp}} <sup>đ</sup></strong> 
+					</span>
 				</div>
 				<div class="block2-txt-child2 flex-r p-t-3">
 					<a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
