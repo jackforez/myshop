@@ -4,43 +4,26 @@
       <!-- Header desktop -->
       <div class="container-menu-desktop">
          <!-- Topbar -->
-			<div class="top-bar">
-				<div class="content-topbar flex-sb-m h-full container">
-					<div class="left-top-bar">
-					
-					</div>
-
-					<div class="right-top-bar flex-w h-full">
-					</div>
-				</div>
-			</div>
-
-         <div class="wrap-menu-desktop">
-            <nav class="limiter-menu-desktop container">
-               <!-- Logo desktop -->		
-               <a href="page/trangchu" class="logo">
-                  <img src="" alt="IMG-LOGO">
-               </a>
-               <!-- Menu desktop -->
-               <div class="menu-desktop">
-                  <ul class="main-menu">
-                     <li class="active-menu">
-                        <a href="page/trangchu">Trang chủ</a>
-                     </li>  
-                     <li>
-                        <a href="shop/about.html">Bài viết</a>
-                     </li>
-                     <li>
-                        <a href="shop/about.html">Giới thiệu về shop</a>
-                     </li>
-                     <li>
-                        <a href="shop/contact.html">Liên hệ với shop</a>
-                     </li>
-                  </ul>
-               </div>
-               <!-- Icon header -->
-             
-               <div class="wrap-icon-header flex-w flex-r-m">
+         <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
+         <!-- Brand/logo -->
+            <a class="navbar-brand logo" href="page/trangchu">Logo</a>
+            
+            <!-- Links -->
+            <ul class="navbar-nav">
+               <li class="nav-item">
+                  <a class="nav-link" href="page/trangchu">Trang chủ</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#">Bài viết</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#">Giới thiệu</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#">Liên hệ</a>
+               </li>
+            </ul>
+            <div class="wrap-icon-header flex-w flex-r-m">
                   <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
                      <i class="zmdi zmdi-search"></i>
                   </div>
@@ -60,8 +43,7 @@
 						   <i class="zmdi zmdi-account"></i>
 				      </div>
                </div>
-            </nav>
-         </div>
+         </nav>
       </div>
       <!-- Header Mobile -->
       <div class="wrap-header-mobile">

@@ -25,6 +25,11 @@
 		</div>
 	</div>
 </section>
+<div class="sec-banner bg3 p-t-20 p-b-50">
+	<div class="container">
+		<div class="row"></div>
+	</div>
+</div>
 <!-- Product -->
 <section class="bg0 p-t-23 p-b-140">
 <div class="container">
@@ -171,11 +176,11 @@
 			</div>
 			<div class="block2-txt flex-w flex-t p-t-14">
 				<div class="block2-txt-child1 flex-col-l ">
-					<a href="page/chitiet/{{$sp->id}}" class="stext-301  hov-cl1 trans-04 js-name-b2 p-b-6">
+					<a href="page/chitiet/{{$sp->id}}" class="stext-301  hov-cl1 trans-04 js-name-detail p-b-6">
 						{{$sp->tensp}}
 					</a>
 					<span class="mtext-103" style="color:#f48642;">
-						<strong>{{$sp->giasp}} <sup>đ</sup></strong> 
+						<strong>{{$sp->giasp}} <sup>Đ</sup></strong> 
 					</span>
 				</div>
 				<div class="block2-txt-child2 flex-r p-t-3">
@@ -184,12 +189,13 @@
 					<img class="icon-heart2 dis-block trans-04 ab-t-l" src="shop/images/icons/icon-heart-02.png" alt="ICON">
 					</a>
 				</div>
+				<div class="block2-txt flex-w mt-3 w-100">
+					<a class="flex-c-m stext-101 cl0 size-101 bg1 hov-btn1 p-lr-15 trans-04 js-addcart-detail form-control" href="page/cart/add/{{$sp->id}}">
+						Thêm vào giỏ hàng
+					</a>			
+				</div>
 			</div>
-			<div class="block2-txt flex-w mt-3">
-				<a class="btn btn-primary hov-btn1 p-lr-15 trans-04 js-addcart-detail w-100" href="page/cart/add/{{$sp->id}}">
-					Thêm vào giỏ hàng
-				</a>			
-			</div>
+			
 		</div>
 	</div>
 	@endforeach 

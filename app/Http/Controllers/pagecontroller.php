@@ -24,9 +24,16 @@ class pagecontroller extends Controller
         $data = mSanpham::find($id);
         $oldCart = Session('cart')?Session::get('cart'):null;
         $cart = new Cart($oldCart);
-        $cart->add($data,$id);
+        $cart->add($data,$id,1);
         $req->Session()->put('cart',$cart);
        return redirect()->back();
-
+    }
+    public function postAddToCart(Request $req,$id){
+        $data = mSanpham::find($id);
+        $oldCart = Session('cart')?Session::get('cart'):null;
+        $cart = new Cart($oldCart);
+        $cart->add($data,$id,$req->num);
+        $req->Session()->put('cart',$cart);
+       return redirect()->back();
     }
 }

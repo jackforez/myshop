@@ -12,6 +12,8 @@ Route::group(['prefix'=>'page'],function(){
     Route::get('chitiet/{id}','pagecontroller@getChitiet');
     Route::post('chitiet/{id}','pagecontroller@postChitiet');
     Route::get('cart/add/{id}','pagecontroller@getAddToCart');
+    Route::post('cart/add/{id}','pagecontroller@postAddToCart');
+
 
 });
 
