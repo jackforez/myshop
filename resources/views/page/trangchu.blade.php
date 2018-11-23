@@ -179,9 +179,18 @@
 					<a href="page/chitiet/{{$sp->id}}" class="stext-301  hov-cl1 trans-04 js-name-detail p-b-6">
 						{{$sp->tensp}}
 					</a>
+					@if($sp->giakm == 0)
 					<span class="mtext-103" style="color:#f48642;">
 						<strong>{{$sp->giasp}} <sup>Đ</sup></strong> 
 					</span>
+					@else
+						<span class="mtext-103" style="color:#f48642;">
+							<strong>{{$sp->giasp}} <sup>Đ</sup></strong> 
+						</span>
+						<span class="mtext-103" style="color:#f48642;">
+						<strong>{{$sp->giakm}} <sup>Đ</sup></strong> 
+					</span>
+					@endif
 				</div>
 				<div class="block2-txt-child2 flex-r p-t-3">
 					<a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
