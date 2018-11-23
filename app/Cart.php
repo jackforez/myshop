@@ -17,17 +17,34 @@ class Cart
 	}
 
 	public function add($item, $id,$sl){
-		$giohang = ['qty'=>0, 'price' => $item->giasp, 'item' => $item];
+		$giohang=[];
+		if($item->giakm >0){
+			$giohang = ['qty'=>0, 'price' => $item->giakm, 'item' => $item];
+		}else{
+			$giohang = ['qty'=>0, 'price' => $item->giasp, 'item' => $item];
+		}
+
+		
 		if($this->items){
 			if(array_key_exists($id, $this->items)){
 				$giohang = $this->items[$id];
 			}
 		}
 		$giohang['qty']+=$sl;
-		$giohang['price'] = $item->giasp * $giohang['qty'];
+		if($item->giakm >0){
+			$giohang['price'] = $item->giakm * $giohang['qty'];
+		}else{
+			$giohang['price'] = $item->giasp * $giohang['qty'];
+		}
+		
 		$this->items[$id] = $giohang;
 		$this->totalQty+=$sl;
-		$this->totalPrice += $item->giasp;
+		if($item->giakm >0){
+			$this->totalPrice += $sl*$item->giakm;
+		}else{
+			$this->totalPrice += $sl*$item->giasp;
+		}
+		
 	}
 	//xóa 1
 	public function removeOne($id){

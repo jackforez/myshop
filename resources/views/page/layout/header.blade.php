@@ -6,7 +6,9 @@
          <!-- Topbar -->
          <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
          <!-- Brand/logo -->
-            <a class="navbar-brand logo" href="page/trangchu">Logo</a>
+            <a class="navbar-brand ml-5" href="page/trangchu">
+               <img src="shop/images/icons/logo1.jpg" alt="">
+            </a>
             
             <!-- Links -->
             <ul class="navbar-nav">
@@ -36,12 +38,12 @@
                         <i class="zmdi zmdi-shopping-cart my-cart-icon"></i>
                      </div>
                   @endif
-                  <a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti" data-notify="0">
+                  <!-- <a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" data-notify="0">
                      <i class="zmdi zmdi-favorite-outline"></i>
                   </a>
                   <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-cart">
 						   <i class="zmdi zmdi-account"></i>
-				      </div>
+				      </div> -->
                </div>
          </nav>
       </div>
@@ -49,7 +51,7 @@
       <div class="wrap-header-mobile">
          <!-- Logo moblie -->		
          <div class="logo-mobile">
-            <a href="page/trangchu"><img src="shop/images/icons/logo-01.png" alt="IMG-LOGO"></a>
+            <a href="page/trangchu"><img src="shop/images/icons/logo1.jpg" alt="IMG-LOGO"></a>
          </div>
          <!-- Icon header -->
          <div class="wrap-icon-header flex-w flex-r-m m-r-15">
@@ -120,15 +122,19 @@
             @foreach($myList as $l)
             <ul class="header-cart-wrapitem w-full">
                <li class="header-cart-item flex-w flex-t m-b-12">
-                  <a href="" class="header-cart-item-img">
+                  <a href="page/cart/del/{{$l['item']['id']}}" class="header-cart-item-img">
                      <img src="upload/{{$l['item']['img']}}" alt="IMG">
                   </a>
                   <div class="header-cart-item-txt p-t-8">
-                     <a href="page/cart/del/{{$l['item']['id']}}" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
+                     <a href="page/chitiet/{{$l['item']['id']}}" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
                      	<h5>{{$l['item']['tensp']}}</h5>
                      </a>
                      <span class="header-cart-item-info">
-                     {{$l['qty']}} x {{$l['item']['giasp']}}
+                        @if($l['item']['giakm'] > 0)
+                           {{$l['qty']}} x {{$l['item']['giakm']}}   
+                        @else
+                           {{$l['qty']}} x {{$l['item']['giasp']}}
+                        @endif
                      </span>
                   </div>
                </li>
@@ -150,3 +156,4 @@
          @endif
       </div>
    </div>
+

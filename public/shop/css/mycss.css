@@ -25,3 +25,6 @@
 .test{
     color: green;
 }
+.t-t {
+  text-decoration-line: line-through;
+}

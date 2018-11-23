@@ -13,6 +13,7 @@ Route::group(['prefix'=>'page'],function(){
     Route::post('chitiet/{id}','pagecontroller@postChitiet');
     Route::get('cart/add/{id}','pagecontroller@getAddToCart');
     Route::post('cart/add/{id}','pagecontroller@postAddToCart');
+    Route::get('cart/del/{id}','pagecontroller@getDelItem');
 
 
 });

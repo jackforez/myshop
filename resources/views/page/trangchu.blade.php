@@ -179,24 +179,21 @@
 					<a href="page/chitiet/{{$sp->id}}" class="stext-301  hov-cl1 trans-04 js-name-detail p-b-6">
 						{{$sp->tensp}}
 					</a>
-					@if($sp->giakm == 0)
-					<span class="mtext-103" style="color:#f48642;">
-						<strong>{{$sp->giasp}} <sup>Đ</sup></strong> 
-					</span>
-					@else
-						<span class="mtext-103" style="color:#f48642;">
-							<strong>{{$sp->giasp}} <sup>Đ</sup></strong> 
-						</span>
-						<span class="mtext-103" style="color:#f48642;">
-						<strong>{{$sp->giakm}} <sup>Đ</sup></strong> 
-					</span>
-					@endif
+					
 				</div>
 				<div class="block2-txt-child2 flex-r p-t-3">
 					<a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
 					<img class="icon-heart1 dis-block trans-04" src="shop/images/icons/icon-heart-01.png" alt="ICON">
 					<img class="icon-heart2 dis-block trans-04 ab-t-l" src="shop/images/icons/icon-heart-02.png" alt="ICON">
 					</a>
+				</div>
+				<div class="d-flex w-100">
+					@if($sp->giakm>0)
+						<div class="mr-auto mtext-103" style="text-decoration-line: line-through;">{{$sp->giasp}} Đ</div>
+						<div class="mtext-103 cl11">{{$sp->giakm}} Đ</div>
+					@else
+						<div class="mtext-103 cl11">{{$sp->giasp}} Đ</div>
+					@endif
 				</div>
 				<div class="block2-txt flex-w mt-3 w-100">
 					<a class="flex-c-m stext-101 cl0 size-101 bg1 hov-btn1 p-lr-15 trans-04 js-addcart-detail form-control" href="page/cart/add/{{$sp->id}}">
