@@ -43,14 +43,14 @@ class pagecontroller extends Controller
 		if(count($cart->items)>0){
 			Session::put('cart',$cart);
 		}else{
-			Session::forget('cart');
+            Session::forget('cart');
 		}
         return redirect()->back();
     }
     public function getThanhtoan(){
         $oldCart = Session::has('cart')?Session::get('cart'):null;
         $cart = new Cart($oldCart);
-        return view('page.thanhtoan',['mycart'=>$cart->items,'tongtien'=>$cart->totalPrice]);
+        return view('page.thanhtoan',['mycart'=>$cart->items,'tongtien'=>$cart->totalPrice,'tongsl'=>$cart->totalQty]);
 
     }    
     public function postThanhtoan(){
