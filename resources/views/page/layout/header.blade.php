@@ -145,7 +145,7 @@
                   TỔNG: {{$totalPrice}}
                </div>
                <div class="header-cart-buttons w-full">
-                  <a href="" class="flex-c-m cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
+                  <a href="page/cart/thanhtoan" class="flex-c-m cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
 					<b>CHI TIẾT ĐƠN HÀNG</b>
 				  </a>
                </div>

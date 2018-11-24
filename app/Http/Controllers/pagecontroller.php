@@ -47,4 +47,13 @@ class pagecontroller extends Controller
 		}
         return redirect()->back();
     }
+    public function getThanhtoan(){
+        $oldCart = Session::has('cart')?Session::get('cart'):null;
+        $cart = new Cart($oldCart);
+        return view('page.thanhtoan',['mycart'=>$cart->items,'tongtien'=>$cart->totalPrice]);
+
+    }    
+    public function postThanhtoan(){
+
+    }
 }

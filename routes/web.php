@@ -14,6 +14,8 @@ Route::group(['prefix'=>'page'],function(){
     Route::get('cart/add/{id}','pagecontroller@getAddToCart');
     Route::post('cart/add/{id}','pagecontroller@postAddToCart');
     Route::get('cart/del/{id}','pagecontroller@getDelItem');
+    Route::get('cart/thanhtoan','pagecontroller@getThanhtoan');
+    Route::post('cart/thanhtoan','pagecontroller@postThanhtoan');
 
 
 });
