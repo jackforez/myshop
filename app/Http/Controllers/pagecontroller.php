@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\mSanpham;
 use App\mSlide;
+use App\mLoaisp;
 use App\Cart;
 use DB;
 use Session;
@@ -13,7 +14,8 @@ class pagecontroller extends Controller
     public function getTrangchu(){
         $sanpham = mSanpham::where('giasp','>',0)->paginate(12);
         $slide = mSlide::all();
-        return view('page.trangchu',['sanpham'=>$sanpham,'slide'=>$slide]);
+        $loaisp = mLoaisp::all();
+        return view('page.trangchu',['sanpham'=>$sanpham,'slide'=>$slide,'loaisp'=>$loaisp]);
         
     }
     public function getChitiet($id){

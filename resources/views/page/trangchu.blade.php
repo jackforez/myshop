@@ -43,12 +43,11 @@
 		<button class="cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1" data-filter="*">
 			<h5>Tất cả</h5>
 		</button>
-		<button class="cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".vonggo">
-			<h5>Vòng gỗ</h5>
-		</button>
-		<button class="cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".bilan">
-			<h5>Bi lăn tay</h5>
-		</button>
+		@foreach($loaisp as $lsp)
+			<button class="cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".">
+				<h5>{{$lsp->tenloaisp}}</h5>
+			</button>
+		@endforeach
 	</div>
 </div>
 <div class="row isotope-grid">
@@ -183,7 +182,7 @@
 														</a>
 													</div>
 												</div>
-
+												@if($sp->img1 != "")
 												<div class="item-slick3" data-thumb="upload/{{$sp->img1}}">
 													<div class="wrap-pic-w pos-relative">
 														<img src="upload/{{$sp->img1}}" alt="IMG-PRODUCT">
@@ -193,7 +192,8 @@
 														</a>
 													</div>
 												</div>
-
+												@endif
+												@if($sp->img2 != "")
 												<div class="item-slick3" data-thumb="upload/{{$sp->img2}}">
 													<div class="wrap-pic-w pos-relative">
 														<img src="upload/{{$sp->img2}}" alt="IMG-PRODUCT">
@@ -203,6 +203,7 @@
 														</a>
 													</div>
 												</div>
+												@endif
 											</div>
 										</div>
 									</div>
@@ -244,9 +245,9 @@
 
 													
 												</div>
-												<button class="flex-c-m stext-101 size-116 btn btn-outline-success js-addcart-detail form-control">
-													Add to cart
-												</button>
+												<a href="page/cart/add/{{$sp->id}}" class="flex-c-m stext-101 size-116 btn btn-outline-success js-addcart-detail form-control">
+													Thêm vào giỏ hàng
+												</a>
 											</div>	
 										</div>
 
