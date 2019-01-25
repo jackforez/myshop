@@ -1,4 +1,5 @@
 @extends('page.layout.index')
+@section('title', 'Trang Chủ - Phong Thủy Thanh Hạnh')
 @section('content')
 <!-- Slider -->
 <section class="section-slide">
@@ -457,4 +458,4 @@
 	</div>
 </div>
 <div class="row">{{$sanpham->links()}}</div>
-@endsection
+@stop

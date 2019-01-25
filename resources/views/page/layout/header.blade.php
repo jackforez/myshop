@@ -131,9 +131,9 @@
                      </a>
                      <span class="header-cart-item-info">
                         @if($l['item']['giakm'] > 0)
-                           {{$l['qty']}} x {{$l['item']['giakm']}}   
+                           {{$l['qty']}} x {{number_format($l['item']['giakm'])}} VNĐ  
                         @else
-                           {{$l['qty']}} x {{$l['item']['giasp']}}
+                           {{$l['qty']}} x {{number_format($l['item']['giasp'])}} VNĐ
                         @endif
                      </span>
                   </div>
@@ -142,7 +142,7 @@
             @endforeach
             <div class="w-full">
                <div class="header-cart-total w-full p-tb-40">
-                  TỔNG: {{$totalPrice}}
+                  TỔNG CỘNG: {{number_format($totalPrice)}} VNĐ
                </div>
                <div class="header-cart-buttons w-full">
                   <a href="page/cart/thanhtoan" class="flex-c-m cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">

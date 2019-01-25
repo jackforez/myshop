@@ -57,7 +57,7 @@
 						{{$sanpham->tensp}}
 					</h4>
 					<span class="mtext-106 cl2">
-					{{$sanpham->giasp}} VNĐ
+						{{number_format($sanpham->giasp)}} VNĐ
 					</span>
 					<p class="stext-102 cl3 p-t-23">
 						{{$sanpham->mota}}
@@ -87,7 +87,6 @@
 				</div>
 			</div>
 		</div>
-		
 </section>
 <!-- Related Products -->
 <section class="sec-relate-product bg0 p-t-45 p-b-105">
@@ -100,35 +99,46 @@
 		<!-- Slide2 -->
 		<div class="wrap-slick2">
 			<div class="slick2">
-				
-				<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-					<!-- Block2 -->
-					<div class="block2">
-						<div class="block2-pic hov-img0">
-							<img src="shop/images/product-01.jpg" alt="IMG-PRODUCT">
-							<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-							Quick View
-							</a>
-						</div>
-						<div class="block2-txt flex-w flex-t p-t-14">
-							<div class="block2-txt-child1 flex-col-l ">
-								<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-								Esprit Ruffle Shirt
-								</a>
-								<span class="stext-105 cl3">
-								$16.64
-								</span>
-							</div>
-							<div class="block2-txt-child2 flex-r p-t-3">
-								<a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-								<img class="icon-heart1 dis-block trans-04" src="shop/images/icons/icon-heart-01.png" alt="ICON">
-								<img class="icon-heart2 dis-block trans-04 ab-t-l" src="shop/images/icons/icon-heart-02.png" alt="ICON">
+				@foreach($tuongtu as $tt)
+					@if($tt->tensp != $sanpham->tensp)
+						<div class="block2 item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
+							<div class="block2-pic hov-img0">
+								<img src="upload/{{$tt->img}}" alt="IMG-PRODUCT">
+								<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04" data-toggle="modal" data-target="#{{$tt->id}}">
+								Xem nhanh
 								</a>
 							</div>
+							<div class="block2-txt flex-w flex-t p-t-14">
+								<div class="block2-txt-child1 flex-col-l ">
+									<a href="page/chitiet/{{$tt->id}}" class="stext-301  hov-cl1 trans-04 js-name-detail p-b-6">
+										{{$tt->tensp}}
+									</a>
+									
+								</div>
+								<div class="block2-txt-child2 flex-r p-t-3">
+									<a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+									<img class="icon-heart1 dis-block trans-04" src="shop/images/icons/icon-heart-01.png" alt="ICON">
+									<img class="icon-heart2 dis-block trans-04 ab-t-l" src="shop/images/icons/icon-heart-02.png" alt="ICON">
+									</a>
+								</div>
+								<div class="d-flex w-100">
+									@if($tt->giakm>0)
+										<div class="mr-auto mtext-103" style="text-decoration-line: line-through;">{{number_format($tt->giasp)}} Đ</div>
+										<div class="mtext-103 cl11">{{number_format($tt->giakm)}} Đ</div>
+									@else
+										<div class="mtext-103 cl11">{{number_format($tt->giasp)}} Đ</div>
+									@endif
+								</div>
+								<div class="block2-txt flex-w mt-3 w-100">
+									<a class="flex-c-m stext-101 cl0 size-101 bg1 hov-btn1 p-lr-15 trans-04 js-addcart-detail form-control" href="page/cart/add/{{$tt->id}}">
+										Thêm vào giỏ hàng
+									</a>			
+								</div>
+							</div>
+							
 						</div>
-					</div>
-				</div>
-				
+					@endif
+				@endforeach
 			</div>
 		</div>
 	</div>

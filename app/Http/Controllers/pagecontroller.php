@@ -20,7 +20,7 @@ class pagecontroller extends Controller
     }
     public function getChitiet($id){
         $sanpham = mSanpham::find($id);
-        $tuongtu = mSanpham::where('maloaisp','=',$sanpham->maloaisp);
+        $tuongtu = mSanpham::where('maloaisp','=',$sanpham->maloaisp)->get();
         return view('page.chitiet',['sanpham'=>$sanpham,'tuongtu'=>$tuongtu]);
     }
     public function getAddToCart(Request $req,$id){
